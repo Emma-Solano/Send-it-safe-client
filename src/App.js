@@ -15,7 +15,8 @@ import AlertDetails from './components/alerts/AlertDetails'
 class App extends Component {
   constructor(props){
     super(props)
-    this.state = { loggedInUser: null };
+    this.state = { loggedInUser: null,
+    loading: true };
     this.service = new AuthService();
   }
  
@@ -52,10 +53,10 @@ class App extends Component {
         <div>
         <Navbar userInSession={this.state.loggedInUser} getUser={this.getTheUser} />
           <Switch>
-            <ProtectedRoute user={this.state.loggedInUser} path='/zones/:id' component={ZoneDetails} />
-            <ProtectedRoute user={this.state.loggedInUser} path='/zones' component={ZoneList} />
-            <ProtectedRoute user={this.state.loggedInUser} path='/climbingRoutes/:id' component={ClimbingRoutesDetail}/>
-            <ProtectedRoute user={this.state.loggedInUser} path='/alertDetails/:id' component={AlertDetails}/>
+            <ProtectedRoute loading={this.state.loading} user={this.state.loggedInUser} path='/zones/:id' component={ZoneDetails} />
+            <ProtectedRoute loading={this.state.loading} user={this.state.loggedInUser} path='/zones' component={ZoneList} />
+            <ProtectedRoute loading={this.state.loading} user={this.state.loggedInUser} path='/climbingRoutes/:id' component={ClimbingRoutesDetail}/>
+            <ProtectedRoute loading={this.state.loading} user={this.state.loggedInUser} path='/alertDetails/:id' component={AlertDetails}/>
           </Switch>
         </div>
       );
@@ -66,10 +67,10 @@ class App extends Component {
             <Switch> 
               <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
               <Route exact path='/' render={() => <Login getUser={this.getTheUser}/>}/>
-              <ProtectedRoute user={this.state.loggedInUser} path='/zones/:id' component={ZoneDetails} />
-              <ProtectedRoute user={this.state.loggedInUser} path='/zones' component={ZoneList} />
-              <ProtectedRoute user={this.state.loggedInUser} path='/climbingRoutes/:id' component={ClimbingRoutesDetail}/>
-              <ProtectedRoute user={this.state.loggedInUser} path='/alertDetails/:id' component={AlertDetails}/>
+              <ProtectedRoute loading={this.state.loading} user={this.state.loggedInUser} path='/zones/:id' component={ZoneDetails} />
+              <ProtectedRoute loading={this.state.loading} user={this.state.loggedInUser} path='/zones' component={ZoneList} />
+              <ProtectedRoute loading={this.state.loading} user={this.state.loggedInUser} path='/climbingRoutes/:id' component={ClimbingRoutesDetail}/>
+              <ProtectedRoute loading={this.state.loading} user={this.state.loggedInUser} path='/alertDetails/:id' component={AlertDetails}/>
             </Switch>
         </div>
       );

@@ -3,12 +3,15 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-const protectedRoute  = ({component: Component, user, ...rest}) => {
+const protectedRoute  = ({component: Component, user, loading, ...rest}) => {
   console.log({component: Component, user, ...rest})
     return (
       <Route
         {...rest}
         render={ props  => {
+          if(loading){
+            return <p>loading...</p>
+          }
             if(user){
               return <Component {...props} loggedInUser={user}/>
             } else {
