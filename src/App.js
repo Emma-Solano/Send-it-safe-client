@@ -25,11 +25,13 @@ class App extends Component {
       this.service.loggedin()
       .then(response =>{
         this.setState({
+          loading: false,
           loggedInUser:  response
         }) 
       })
       .catch( err =>{
         this.setState({
+          loading: false,
           loggedInUser:  false
         }) 
       })
