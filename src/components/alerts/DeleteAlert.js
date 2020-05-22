@@ -7,7 +7,7 @@ class DeleteAlert extends Component {
       
 
   deleteAlert = (id) => {
-    axios.delete(`http://localhost:5000/api/alerts/${id}`, {withCredentials:true})
+    axios.delete(`https://send-it-safe-server.herokuapp.com/api/alerts/${id}`, {withCredentials:true})
     .then( () =>{
         this.props.history.push('/alerts');       
     })

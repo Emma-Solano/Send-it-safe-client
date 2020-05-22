@@ -11,7 +11,7 @@ class ClimbingRoutesList extends Component {
 
   getAllclimbingRoutes = () =>{
     const { params } = this.props.match;
-    axios.get(`http://localhost:5000/api/zones/${params.id}/climbingRoutes`, {withCredentials:true})
+    axios.get(`https://send-it-safe-server.herokuapp.com/api/zones/${params.id}/climbingRoutes`, {withCredentials:true})
     .then(responseFromApi => {
         console.log(this.props.match)
       this.setState({

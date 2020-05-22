@@ -21,7 +21,7 @@ class ZoneDetails extends Component {
  
   getSingleZone = () => {
     const { params } = this.props.match;
-    axios.get(`http://localhost:5000/api/zones/${params.id}`, {withCredentials:true})
+    axios.get(`https://send-it-safe-server.herokuapp.com/api/zones/${params.id}`, {withCredentials:true})
     .then( responseFromApi =>{
       const theZone = responseFromApi.data;
       this.setState(theZone);

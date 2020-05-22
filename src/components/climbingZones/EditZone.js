@@ -22,7 +22,7 @@ class EditZone extends Component {
 
     event.preventDefault();
 
-    axios.put(`http://localhost:5000/api/zones/${this.props.theZone._id}`, { name, state, municipality }, {withCredentials:true})
+    axios.put(`https://send-it-safe-server.herokuapp.com/api/zones/${this.props.theZone._id}`, { name, state, municipality }, {withCredentials:true})
     .then( () => {
         this.props.getTheZone();
         // after submitting the form, redirect to '/zones'

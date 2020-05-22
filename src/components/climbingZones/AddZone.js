@@ -15,7 +15,7 @@ class AddZone extends Component {
     const name = this.state.name;
     const state = this.state.state;
     const municipality = this.state.municipality;
-    axios.post("http://localhost:5000/api/zones", { name, state, municipality }, {withCredentials:true})
+    axios.post("https://send-it-safe-server.herokuapp.com/api/zones", { name, state, municipality }, {withCredentials:true})
     .then( () => {
         this.props.getData();
         this.setState({name: "", state: "", municipality: ""});

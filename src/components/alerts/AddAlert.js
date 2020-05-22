@@ -19,7 +19,7 @@ class AddAlert extends Component {
     const date = this.state.date
     const climbingRoute = params.id
 
-    axios.post("http://localhost:5000/api/alerts", { alertType, description, date, climbingRoute}, {withCredentials:true})
+    axios.post("https://send-it-safe-server.herokuapp.com/api/alerts", { alertType, description, date, climbingRoute}, {withCredentials:true})
     .then( () => {
         console.log(this.props)
         this.setState({alertType: "", description: "", date: ""});

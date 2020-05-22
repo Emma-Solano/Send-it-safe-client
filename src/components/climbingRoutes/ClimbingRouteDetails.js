@@ -19,7 +19,7 @@ class ClimbingRoutesDetail extends Component {
 
   getTheClimbingRoute = () => {
     const { params } = this.props.match;
-    axios.get(`http://localhost:5000/api/zones/${params.zone}/climbingRoutes/${params.id}`)
+    axios.get(`https://send-it-safe-server.herokuapp.com/api/zones/${params.zone}/climbingRoutes/${params.id}`)
     .then( responseFromApi =>{
       const theClimbingRoute = responseFromApi.data;
       this.setState(theClimbingRoute);

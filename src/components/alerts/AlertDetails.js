@@ -18,7 +18,7 @@ class AlertDetails extends Component {
 
   getTheAlertDetail = () => {
     const { params } = this.props.match;
-    axios.get(`http://localhost:5000/api/alertDetails/${params.id}`)
+    axios.get(`https://send-it-safe-server.herokuapp.com/api/alertDetails/${params.id}`)
     .then( responseFromApi =>{
       console.log(params)
       const theSingleAlert = responseFromApi.data;

@@ -13,7 +13,7 @@ class ZoneList extends Component {
   }
 
   getAllZones = () =>{
-    axios.get(`http://localhost:5000/api/zones`, {withCredentials:true})
+    axios.get(`https://send-it-safe-server.herokuapp.com/api/zones`, {withCredentials:true})
     .then(responseFromApi => {
       this.setState({
         listOfZones: responseFromApi.data

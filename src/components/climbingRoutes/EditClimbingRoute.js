@@ -20,7 +20,7 @@ class EditClimbingZone extends Component {
 
     event.preventDefault();
 
-    axios.put(`http://localhost:5000/api/climbingRoutes/${this.props.theClimbingRoute._id}`, { name, sector }, {withCredentials:true})
+    axios.put(`https://send-it-safe-server.herokuapp.com/api/climbingRoutes/${this.props.theClimbingRoute._id}`, { name, sector }, {withCredentials:true})
     .then( () => {
         this.props.getSingleClimbingRoute();
         // after submitting the form, redirect to '/zones'

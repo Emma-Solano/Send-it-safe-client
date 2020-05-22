@@ -10,7 +10,7 @@ class AlertList extends Component {
 
   getAllAlerts = () =>{
     const { params } = this.props.match;
-    axios.get(`http://localhost:5000/api/climbingRoutes/${params.id}/alerts`, {withCredentials:true})
+    axios.get(`https://send-it-safe-server.herokuapp.com/api/climbingRoutes/${params.id}/alerts`, {withCredentials:true})
     .then(responseFromApi => {
         console.log(responseFromApi.data)
       this.setState({

@@ -19,7 +19,7 @@ class AddClimbingRoute extends Component {
     
     // { name, sector, projectID } => this is 'req.body' that will be received on the server side in this route, 
     // so the names have to match
-    axios.post("http://localhost:5000/api/climbingRoutes", { name, sector, zoneID })
+    axios.post("https://send-it-safe-server.herokuapp.com/api/climbingRoutes", { name, sector, zoneID })
     .then( () => {
           // after submitting the form, retrieve project one more time so the new climbingRoute is displayed as well 
           //              |
