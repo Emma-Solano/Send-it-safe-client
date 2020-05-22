@@ -26,10 +26,10 @@ class Navbar extends Component {
     if(this.state.loggedInUser){
       return(
         <nav className="nav-style">
-            <h1>Hola {this.state.loggedInUser.username}</h1>
-            <h2><Link to='/zones' style={{ textDecoration: 'none' }}>Zonas de escalada <span>⛰️</span> </Link></h2>
+            <h4 className="greeting">Hola {this.state.loggedInUser.username}</h4>
+            <h2 className="home-link"><Link to='/zones' style={{ textDecoration: 'none' }}><span>⛰️</span> Zonas de escalada <span>⛰️</span> </Link></h2>
               <Link to='/'>
-                <button onClick={() => this.logoutUser()}>Cerrar sesión</button>
+                <button className="logout-button" onClick={() => this.logoutUser()}>Cerrar sesión</button>
               </Link>
         </nav>
       )

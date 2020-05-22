@@ -31,7 +31,7 @@ class Login extends Component {
   render(){
     return(
       <div>
-      <section>
+      <section className="welcome">
         <h1>Bienvenido a Send it Safe</h1>
         <h2>Encadena seguro!</h2>
         <h3>Send it Safe te ayuda a notificar a otros escaladores posibles peligros o advertencias, así como ver alertas creadas por otros miembros para hacer tu encadene súper seguro!</h3>

@@ -29,7 +29,7 @@ class AddZone extends Component {
 
   render(){
     return(
-      <div>
+      <div className="AddZoneContainer">
       <h2>Añadir zona de escalada <span>🧗 </span></h2>
         <form onSubmit={this.handleFormSubmit}>
           <label>Nombre de la zona:</label> <br></br>
@@ -39,7 +39,7 @@ class AddZone extends Component {
           <label>Municipio o delegación:</label> <br></br>
           <input type="text" name="municipality" value={this.state.municipality} onChange={ e => this.handleChange(e)} /><br></br>
           
-          <input type="submit" value="Crear" />
+          <input id="zoneClimingAdd" type="submit" value="Crear" />
         </form>
       </div>
     )

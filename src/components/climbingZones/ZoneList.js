@@ -30,7 +30,7 @@ class ZoneList extends Component {
         <div style={{width: '60%', float:"left"}}>
           { this.state.listOfZones.map( zone => {
             return (
-              <div key={zone._id}>
+              <div className="listOfZones" key={zone._id}>
                 <Link to={`/zones/${zone._id}`}>
                   <h3>{zone.name}</h3>
                 </Link>
