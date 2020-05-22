@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 class AddZone extends Component {
   constructor(props){
@@ -39,7 +40,7 @@ class AddZone extends Component {
           <label>Municipio o delegación:</label> <br></br>
           <input type="text" name="municipality" value={this.state.municipality} onChange={ e => this.handleChange(e)} /><br></br>
           
-          <input id="zoneClimingAdd" type="submit" value="Crear" />
+          <Button variant="success" type="submit"> Crear zona</Button>
         </form>
       </div>
     )

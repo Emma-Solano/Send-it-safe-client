@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f7f7;
 }
 
 code {
@@ -21,6 +22,7 @@ code {
   justify-content: space-between;
   padding-top: 8px;
 }
+
 
 .logout-button{
   padding: 4px;
@@ -86,4 +88,130 @@ code {
   box-shadow: none;
   border: 2px solid #9dff00;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.welcome{
+  background-color: #cef3d2;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.welcome img{
+  text-align: center;
+}
+
+.welcome p{
+  background-color:#cef3d2 ;
+}
+
+.signUp{
+  background-color: #fffbde ;
+  text-align: center;
+}
+
+.signUp ol li{
+  text-align: left;
+}
+
+.signUp form input{
+  margin-bottom: 8px;
+  background-color:#fffbde ;
+  border-radius: 8px;
+  border: 1px solid
+}
+
+.loginForm{
+  background-color:#cef3d2 ;
+  text-align: center;
+}
+
+.loginForm input{
+  margin-bottom: 8px;
+  background-color:#cef3d2 ;
+  border-radius: 8px;
+  border: 1px solid
+}
+
+.welcomeFooter{
+  background-color: black;
+  color: white;
+}
+
+.addClimbingRoute form input{
+  margin-bottom: 8px; ;
+  border-radius: 8px;
+  border: 1px solid
+}
+
+.addClimbingRoute{
+  text-align: center;
+}
+
+.climbingRotesList{
+  text-align: center;
+}
+
+.climbingRoutesDetail{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#climbingRouteCardWithEditForm{
+  text-align: center;
+}
+
+.addAlertForm{
+  background-color: #f5d442;
+  padding: 15px;
+}
+
+.addAlertForm button{
+  margin-top: 20px;
+}
+
+.alertList a{
+  color: red;
+}
+
+.climbingRouteEdit form input{
+  margin-bottom: 8px; ;
+  border-radius: 8px;
+  border: 1px solid
+}
+
+.deleteAlertButton{
+margin-top: 50px;
+}
+
+.alertCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.editFormZone form input{
+  margin-top: 10px; ;
+  border-radius: 8px;
+  border: 1px solid
+}
+
+.editFormZone button{
+  margin-top: 15px;
+}
+
+.editFormZone h3{
+  margin-top: 30px;
+}
+
+.climbingRouteDetails{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  text-align: center;
 }

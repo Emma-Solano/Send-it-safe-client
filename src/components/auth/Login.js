@@ -30,29 +30,22 @@ class Login extends Component {
     
   render(){
     return(
-      <div>
+      <div className="welcomeMain">
       <section className="welcome">
         <h1>Bienvenido a Send it Safe</h1>
         <h2>Encadena seguro!</h2>
-        <h3>Send it Safe te ayuda a notificar a otros escaladores posibles peligros o advertencias, así como ver alertas creadas por otros miembros para hacer tu encadene súper seguro!</h3>
-        <p>Instrucciones:</p>
-        <ol>
-          <li>Inicia sesión o regístrate</li>
-          <li>Elige la zona de escalada a la que planeas ir (en caso de no existir, podrás crearla!)</li>
-          <li>Dentro de cada zona podrás observar las viás existentes, podrás crearlas igual que en el punto anterior en caso de que aún no estén registradas</li>
-          <li>Un indicador te notificará cuántas alertas existen por via, dirígete a ellas para poder ver el detalle o reportar algún peligro.</li>
-          <li>Escala seguro y diviértete.</li>  
-        </ol>
+        <p>Send it Safe te ayuda a notificar a otros escaladores posibles peligros o advertencias, así como ver alertas creadas por otros miembros para hacer tu encadene súper seguro!</p>
+        <img src="https://image.freepik.com/free-vector/flat-mountain-landscape_126546-31.jpg" alt="mountain illustration" width="500" height="500"></img>
       </section>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Nombre de Usuario:</label>
-          <input type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
-          <label>Contraseña:</label>
-          <input type="text" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
+        <form className="loginForm" onSubmit={this.handleFormSubmit}>
+          <label>Nombre de Usuario:</label><br></br>
+          <input type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/><br></br>
+          <label>Contraseña:</label><br></br>
+          <input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} /><br></br>
           
-          <input type="submit" value="Login" />
+          <input type="submit" value="Iniciar sesión" />
         </form>
-        <p>¿Aún no tienes cuenta? 
+        <p className="welcomeFooter">¿Aún no tienes cuenta? 
             <Link to={"/signup"}> Crear cuenta!</Link>
         </p>
       </div>

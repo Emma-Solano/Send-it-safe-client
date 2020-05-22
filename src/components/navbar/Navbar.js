@@ -36,9 +36,7 @@ class Navbar extends Component {
     } else {
       return ( 
         <nav className="nav-style">
-          <ul>
-            <li><Link to='/signup' style={{ textDecoration: 'none' }}>Regístrate!</Link></li>
-          </ul>
+          <p>Hecho con <span>❤️</span> en Ironhack México <span>🇲🇽</span> por Emma Solano! </p>
         </nav>
       )
     }

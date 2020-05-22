@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import EditZone from './EditZone';
 import AddClimbingRoute from '../climbingRoutes/AddClimbingRoute';
 import ClimbingRoutesList from '../climbingRoutes/ClimbingRoutesList'
+import Card from 'react-bootstrap/Card';
 
 class ZoneDetails extends Component {
   constructor(props){
@@ -32,14 +33,21 @@ class ZoneDetails extends Component {
    
   render(){
     return(
-      <div>
-        <h1>{this.state.name}</h1>
-        <h2>{this.state.state}</h2>
-        <h3>{this.state.municipality}</h3>
-        <ClimbingRoutesList/>
-        <AddClimbingRoute theZone={this.state} getTheZone={this.getSingleZone} />
-        <EditZone theZone={this.state} gettheZone={this.getSingleZone} {...this.props} />
-        <Link to={'/zones'}>Regresar a zonas de escalada</Link>
+      <div className="climbingRouteDetails">
+        <div>
+        <Card style={{ width: '36rem' }}>
+        <Card.Img variant="top" src="https://www.jonasclaesson.com/wp-content/uploads/2015/05/Bighorn-Sheep-Moab-illustration.jpg" />
+          <Card.Header>{this.state.name}</Card.Header>
+          <Card.Body>
+          <Card.Title className="mb-2 text-muted">{this.state.state}</Card.Title>
+          <Card.Text>{this.state.municipality}</Card.Text>
+        </Card.Body>
+      </Card>
+        </div><br></br>
+        <h2>Vías de escalar en ésta zona.</h2>
+        <div><ClimbingRoutesList/></div>
+        <div><AddClimbingRoute theZone={this.state} getTheZone={this.getSingleZone} /></div>
+        <div><EditZone theZone={this.state} gettheZone={this.getSingleZone} {...this.props} /></div>
       </div>
     )
   }

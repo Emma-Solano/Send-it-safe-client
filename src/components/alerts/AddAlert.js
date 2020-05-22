@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 class AddAlert extends Component {
   constructor(props){
@@ -33,7 +34,7 @@ class AddAlert extends Component {
 
   render(){
     return(
-      <div>
+      <div className="addAlertForm">
         <form onSubmit={this.handleFormSubmit}>
           <label>Nombre de la alerta:</label><br></br>
           <input type="text" name="alertType" value={this.state.title} onChange={ e => this.handleChange(e)}/><br></br>
@@ -41,7 +42,7 @@ class AddAlert extends Component {
           <textarea name="description" value={this.state.description} onChange={ e => this.handleChange(e)} /><br></br>
           <label>Fecha de reporte:</label><br></br>
           <input type="date" name="date" value={this.state.date} onChange={ e => this.handleChange(e)}/><br></br>
-          <input type="submit" value="Submit" />
+          <Button variant="dark" type="submit">Enviar</Button>
         </form>
       </div>
     )

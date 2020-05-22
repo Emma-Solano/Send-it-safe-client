@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import DeleteAlert from './DeleteAlert'
+import Card from 'react-bootstrap/Card';
 
 
 class AlertDetails extends Component {
@@ -31,13 +32,20 @@ class AlertDetails extends Component {
   render(){
     console.log(this.state)
     return(
-      <div>
-        <h1>{this.state.alert?.alertType}</h1>
-        <h3>{this.state.alert?.description}</h3>
-        <h4>{this.state.alert?.date}</h4>
-        <section>
+      <div className="alertCard">
+      <Card style={{ width: '36rem' }}>
+        <Card.Img variant="top" src="https://images-na.ssl-images-amazon.com/images/I/518mAYfVj0L._SX466_.jpg" />
+          <Card.Header>{this.state.alert?.alertType}</Card.Header>
+          <Card.Body>
+          <Card.Title className="mb-2 text-muted">{this.state.alert?.date}</Card.Title>
+          <Card.Text>
+          {this.state.alert?.description}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+        <div>
           <DeleteAlert {...this.props} user= {this.props.loggedInUser} alert={this.state.alert}/>
-        </section>
+        </div>
       </div>
     )
   }

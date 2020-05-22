@@ -25,13 +25,13 @@ class AlertList extends Component {
 
   render(){
     return(
-      <div>
-        <div style={{width: '60%', float:"left"}}>
+      <div className="alertList">
+        <div>
           { this.state.listOfAlerts.map(alert => {
             return (
               <div key={alert._id}>
                 <Link to={`/alertDetails/${alert._id}`}>
-                  <h3>{alert.alertType}</h3>
+                  <h2>{alert.alertType}</h2>
                 </Link>
               </div>
             )})

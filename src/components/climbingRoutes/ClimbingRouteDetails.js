@@ -1,10 +1,10 @@
-// components/tasks/TaskDetails.js
 
 import React, { Component } from 'react';
 import axios from 'axios';
 import EditClimbingRoute from './EditClimbingRoute'
 import AddAlert from '../alerts/AddAlert'
 import AlertList from '../alerts/AlertList'
+import Card from 'react-bootstrap/Card';
 
 
 class ClimbingRoutesDetail extends Component {
@@ -31,20 +31,19 @@ class ClimbingRoutesDetail extends Component {
 
   render(){
     return(
-      <div>
-        <h1>{this.state.name}</h1>
-        <p>{this.state.sector}</p>
-        <section>
-        <h3>Alertas reportadas en ésta vía.</h3>
-          <AlertList/>
-        </section>
-        <section>
-        <h2>Añadir Alerta <span>⚠️</span></h2>
-          <AddAlert/>
-        </section>
-        <section>
-        <EditClimbingRoute theClimbingRoute={this.state} getSingleClimbingRoute={this.getTheClimbingRoute} {...this.props} />
-        </section>
+      <div className="climbingRoutesDetail">
+      <div id="climbingRouteCardWithEditForm">
+      <Card style={{ width: '36rem' }}>
+        <Card.Img variant="top" src="https://img.freepik.com/free-vector/climb-characters-extreme-sport-cliff-wall-rocks-stones-big-rocky-hills-mountains-explore-sportsmen-male-female_80590-5998.jpg?size=626&ext=jpg" />
+          <Card.Header>{this.state.name}</Card.Header>
+          <Card.Body>
+          <Card.Title className="mb-2 text-muted">{this.state.sector}</Card.Title>
+        </Card.Body>
+      </Card><br></br>
+      <EditClimbingRoute theClimbingRoute={this.state} getSingleClimbingRoute={this.getTheClimbingRoute} {...this.props}/>
+      </div>
+        <div><h3><span>⚠️</span> Añadir Alerta <span>⚠️</span></h3><AddAlert/></div>
+        <div><h3><span>📄</span> Alertas reportadas en ésta vía <span>📄</span></h3><AlertList/></div>
       </div>
     )
   }

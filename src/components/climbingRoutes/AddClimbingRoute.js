@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 class AddClimbingRoute extends Component {
   constructor(props){
@@ -44,7 +45,7 @@ class AddClimbingRoute extends Component {
   showAddClimbingRouteForm = () => {
     if(this.state.isShowing){
         return(
-            <div>
+            <div className="addClimbingRoute">
                   <h3>Crea una vía.</h3>
                   <form onSubmit={this.handleFormSubmit}>
                   <label>Nombre:</label><br></br>
@@ -52,7 +53,7 @@ class AddClimbingRoute extends Component {
                   <label>Sector:</label><br></br>
                   <input type="text" name="sector" value={this.state.sector} onChange={ e => this.handleChange(e)} /><br></br>
                   
-                  <input type="submit" value="Agregar" />
+                  <Button variant="success" type="submit">Agregar vía</Button>
                   </form>
             </div>
           )
@@ -63,7 +64,7 @@ class AddClimbingRoute extends Component {
     return(
       <div>
             <hr/>
-            <button onClick={() => this.toggleForm()}> <span>➕</span> Añadir vias de escalada en ésta zona. </button>
+            <Button variant="primary" size="lg" block onClick={() => this.toggleForm()}> <span>➕</span> Añadir vias de escalada en ésta zona. </Button>
             { this.showAddClimbingRouteForm() }
       </div>
     )

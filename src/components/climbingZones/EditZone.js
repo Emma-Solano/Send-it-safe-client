@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 class EditZone extends Component {
   constructor(props){
@@ -50,8 +51,7 @@ class EditZone extends Component {
 
   render(){
     return (
-      <div>
-        <hr />
+      <div className="editFormZone">
         <h3>Editar zona de escalada <span>📝</span></h3>
         <form onSubmit={this.handleFormSubmit}>
           <label>Nombre</label><br></br>
@@ -60,7 +60,7 @@ class EditZone extends Component {
           <input type="text" name="state" value={this.state.state} onChange={e => this.handleChangeState(e)} /><br></br>
           <label>Municipio o delegación</label><br></br>
           <input type="text" name="state" value={this.state.municipality} onChange={e => this.handleChangeMunicipality(e)}/><br></br>
-          <input type="submit" value="Submit" />
+          <Button variant="success" type="submit" > Enviar </Button>
         </form>
       </div>
     )

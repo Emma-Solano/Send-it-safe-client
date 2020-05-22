@@ -1,6 +1,7 @@
 // DELETE PROJECT:
 import React, { Component } from 'react';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 class DeleteAlert extends Component {
       
@@ -19,8 +20,8 @@ class DeleteAlert extends Component {
     console.log(this.props)
     if(this.props.user && this.props.alert.owner?._id == this.props.user?._id){
       return(
-        <div>
-          <button onClick={() => this.deleteAlert(this.props.alert._id)}>Eliminar alerta</button>
+        <div className="deleteAlertButton">
+          <Button variant="danger" size="lg" onClick={() => this.deleteAlert(this.props.alert._id)}>Eliminar alerta</Button>
         </div>
       )
     }else{
