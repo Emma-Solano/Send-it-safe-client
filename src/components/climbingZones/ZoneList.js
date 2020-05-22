@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AddZone from './AddZone';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 class ZoneList extends Component {
   constructor(){
@@ -27,13 +28,15 @@ class ZoneList extends Component {
   render(){
     return(
       <div>
-        <div style={{width: '60%', float:"left"}}>
+        <div style={{width: '60%', float:"left", marginTop: "35px"}}>
           { this.state.listOfZones.map( zone => {
             return (
               <div className="listOfZones" key={zone._id}>
+              <ListGroup variant="flush">
                 <Link to={`/zones/${zone._id}`}>
-                  <h3>{zone.name}</h3>
+                <ListGroup.Item variant="info"><h2>{zone.name}</h2></ListGroup.Item>
                 </Link>
+                </ListGroup>
               </div>
             )})
           }

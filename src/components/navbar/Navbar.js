@@ -27,7 +27,7 @@ class Navbar extends Component {
       return(
         <nav className="nav-style">
             <h4 className="greeting">Hola {this.state.loggedInUser.username}</h4>
-            <h2 className="home-link"><Link to='/zones' style={{ textDecoration: 'none' }}><span>⛰️</span> Zonas de escalada <span>⛰️</span> </Link></h2>
+            <h2 className="home-link"><Link to='/zones' style={{ textDecoration: 'none' }}><span>⛰️</span> Ir a zonas de escalada <span>⛰️</span> </Link></h2>
               <Link to='/'>
                 <button className="logout-button" onClick={() => this.logoutUser()}>Cerrar sesión</button>
               </Link>

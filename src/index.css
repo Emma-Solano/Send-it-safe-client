@@ -53,28 +53,32 @@ code {
 }
 
 .listOfZones{
-  text-align: left;
-  border: 1px solid #0095ff;
-  margin: 8px;
-  width: 50%;
-  border-radius: 12px;
-  padding-top: 3px;
-  padding-left: 10px;
-  background-color: #0095ff;
-  opacity: 0.8;
-}
-
-.listOfZones a{
-  color: black;
+text-align: center;
+margin-left: 40px;
+width: 50%;
 }
 
 .AddZoneContainer{
-  height: 100%;
-  width: 30%;
   margin-top: 40px;
 }
 
 .AddZoneContainer h2{
+  text-align: center;
+}
+
+.AddZoneContainer form input{
+  margin-top: 10px; ;
+  border-radius: 8px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.AddZoneContainer button{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.AddZoneContainer {
   text-align: center;
 }
 

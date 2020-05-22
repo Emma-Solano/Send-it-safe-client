@@ -34,7 +34,7 @@ class Login extends Component {
       <section className="welcome">
         <h1>Bienvenido a Send it Safe</h1>
         <h2>Encadena seguro!</h2>
-        <p>Send it Safe te ayuda a notificar a otros escaladores posibles peligros o advertencias, así como ver alertas creadas por otros miembros para hacer tu encadene súper seguro!</p>
+        <h5>Send it Safe te ayuda a notificar a otros escaladores posibles peligros o advertencias, así como ver alertas creadas por otros miembros para hacer tu encadene súper seguro!</h5>
         <img src="https://image.freepik.com/free-vector/flat-mountain-landscape_126546-31.jpg" alt="mountain illustration" width="500" height="500"></img>
       </section>
         <form className="loginForm" onSubmit={this.handleFormSubmit}>
