@@ -10,7 +10,7 @@ class AuthService {
     });
     this.service = service;
   }
-
+//https://send-it-safe-server.herokuapp.com/api
   signup = (username, password) => {
     return this.service.post('/signup', {username, password})
     .then(response => response.data)
