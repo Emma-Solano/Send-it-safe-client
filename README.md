@@ -1,6 +1,7 @@
 # Send-it-Safe-client 🧗‍♂️ 
 ---
-Front-end side for Module's 3 Project ⛰️
+# Front-end side for Module's 3 Project ⛰️
+---
 # Objective 🎯
 The intention to create this application is to provide mountaineers, sport climbers or any other person that goes outdoors a safe way to communicate to others dangers or warnings spotted in the mountain, also the user can consult what type of threats will face, prior to the outdoor trip.
 ---
@@ -12,4 +13,4 @@ The intention to create this application is to provide mountaineers, sport climb
 - As you see, the creation of this posts is the essential part of this app, so you need to be as descriptive as you can.
 - Finally, go outside, be careful and enjoy the mountain.
 ---
-#Made with love by Emma-Solano ❤️ 
+# Made with love by Emma-Solano ❤️ 
